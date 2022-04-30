@@ -50,3 +50,7 @@ tr:nth-child(even) {
   td{
 	  text-align: justify;
   }
+  .answer{
+	  text-align: justify;
+	  line-height: 1.5;
+  }

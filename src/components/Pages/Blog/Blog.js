@@ -90,26 +90,26 @@ const Blog = () => {
 					</tr>
 					<tr>
 						<td>
-						These databases have fixed or static or predefined schema
+							These databases have fixed or static or predefined schema
 						</td>
 						<td>
-						   They have dynamic schema
-						</td>
-					</tr>
-					<tr>
-						<td>
-						These databases are not suited for hierarchical data storage.
-						</td>
-						<td>
-						These databases are best suited for hierarchical data storage.
+							They have dynamic schema
 						</td>
 					</tr>
 					<tr>
 						<td>
-						Vertically Scalable
+							These databases are not suited for hierarchical data storage.
 						</td>
 						<td>
-						Horizontally scalable
+							These databases are best suited for hierarchical data storage.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Vertically Scalable
+						</td>
+						<td>
+							Horizontally scalable
 						</td>
 					</tr>
 					<tr>
@@ -117,7 +117,7 @@ const Blog = () => {
 							Follows ACID property
 						</td>
 						<td>
-						Follows CAP(consistency, availability, partition tolerance)
+							Follows CAP(consistency, availability, partition tolerance)
 						</td>
 					</tr>
 				</table>
@@ -125,12 +125,30 @@ const Blog = () => {
 			{/* end of single question */}
 			{/* start of single question */}
 			<div className="single-question">
+				<h3 className="question">
+					When should I use nodejs ?
+				</h3>
+				<article>
+					<p className="answer">
+						I believe Node.js is best suited for real-time applications: online games, collaboration tools, chat rooms, or anything where what one user (or robot? or sensor?) does with the application needs to be seen by other users immediately, without a page refresh.
 
+						I should also mention that Socket.IO in combination with Node.js will reduce your real-time latency even further than what is possible with long polling. Socket.IO will fall back to long polling as a worst case scenario, and instead use web sockets or even Flash if they are available.
+
+						But I should also mention that just about any situation where the code might block due to threads can be better addressed with Node.js. Or any situation where you need the application to be event-driven.
+					</p>
+				</article>
 			</div>
 			{/* end of single question */}
 			{/* start of single question */}
 			<div className="single-question">
-
+				<h3 className="question">
+					when should I use mongodb?
+				</h3>
+				<article>
+					<p className="answer">
+					 In my opinion, NoSQL databases like MongoDB are a good choice when your data is document-centric and doesn’t fit well into the schema of a relational database, when you need to accommodate massive scale, when you are rapidly prototyping, and a few other use cases.
+					</p>
+				</article>
 			</div>
 			{/* end of single question */}
 		</section>
