@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.section-center{
+	width: 80vw;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+.question{
+	text-transform: capitalize;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+}
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+caption{
+	font-size: 1.2rem;
+	text-transform: capitalize;
+	/* margin-bottom: 0.5rem;  */
+	letter-spacing: 0.15rem;
+
+}
+th, tr, td{
+	border: 1px solid gray;
+	padding: 0.5rem 1rem;
+	color: rgb(0, 13, 26);
+}
+tr:nth-child(even) {
+	background-color: #dddddd;
+  }
+  th{
+	  background-color: rgb(0, 13, 26);
+	  color: white;
+	  padding: 0.8rem;
+	  letter-spacing: 0.2rem; 
+	  border: none; 
+	  font-size: 1rem;
+  }
+  td{
+	  text-align: justify;
+  }
