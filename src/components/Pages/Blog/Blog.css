@@ -9,11 +9,16 @@
 	margin: 0 auto;
 	padding: 1rem 0;
 }
+.single-question{
+	margin-bottom: 2rem;
+}
 .question{
 	text-transform: capitalize;
 	letter-spacing: 0.1rem;
 	margin-bottom: 1.5rem;
 	font-size: 1.5rem;
+	background-color: yellowgreen; 
+	padding: 0.5rem;
 }
 table{
 	width: 100%;
