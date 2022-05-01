@@ -1,15 +1,24 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Adduser from './components/Adduser/Adduser';
 import Blog from './components/Pages/Blog/Blog';
+import Home from './components/Pages/Home/Home';
+import UpdateUser from './components/Update/UpdateUser';
+
 
 function App() {
   return (
     <div className="">
-      <Blog> </Blog>
+      {/* <Blog> </Blog> */}
       <Routes>
-        <Route path='/blog' element= {<Blog></Blog>}>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}>
         </Route>
-     </Routes>
+        <Route path='/user/add' element={<Adduser></Adduser>}></Route>
+        <Route path='/update/:id' element={<UpdateUser>
+          
+        </UpdateUser> }></Route>
+      </Routes>
     </div>
   );
 }
