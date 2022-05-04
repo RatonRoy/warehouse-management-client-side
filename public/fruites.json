@@ -1,0 +1,58 @@
+[
+	{
+		"_id" : 1, 
+		"name" : "Banana", 
+		"price" : 150, 
+		"img" : "https://i.ibb.co/wrV74nG/banana.jpg", 
+		"description" : "Banana is one of the major fruits of Bangladesh.  This  fruit is available throughout the year. We store variers  type of banana in our warehouse."
+	},
+	{
+		"_id" : 2, 
+		"name" : "Mango", 
+		"price" : 100, 
+		"img" : "https://i.ibb.co/phR3ghB/mango.jpg", 
+		"description" : "Mango fruit is rich in pre-biotic dietary fiber, vitamins, minerals, and poly-phenolic flavonoid antioxidant compounds.  Mango a fruit widely cultivated in the tropical and subtropical region of the Bangladesh."
+	},
+	{
+		"_id" : 3, 
+		"name" : "Jackfruit", 
+		"price" : 200, 
+		"img" : "https://i.ibb.co/HqcjDWN/jackfruit.jpg", 
+		"description" : "Jackfruit offers several key nutrients, including fiber, protein, vitamin C, B vitamins, and potassium. We have different type of jackfruit in our warehouse."
+	},
+	{
+		"_id" : 4, 
+		"name" : "Blackberry", 
+		"price" : 150, 
+		"img" : "https://i.ibb.co/Xp58Mkf/Blackberry.jpg", 
+		"description" : "Blackberry is a seasonal fruit in our country. We only store this fruit only the summer season. This is a very delicious fruit for fruit lovers in our country. "
+	},
+	{
+		"_id" : 5, 
+		"name" : "Watermelon", 
+		"price" : 50, 
+		"img" : "https://i.ibb.co/9gPdCGw/watermelon.jpg", 
+		"description" : "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals etc."
+	},
+	{
+		"_id" : 6, 
+		"name" : "Lychee", 
+		"price" : 250, 
+		"img" : "https://i.ibb.co/4s5ydDm/Lychee.jpg", 
+		"description" : "Lychees contain several healthy minerals, vitamins, and antioxidants, such as potassium, copper, vitamin C, epicatechin, and rutin. These may help protect against heart disease, cancer, and diabetes "
+	},
+	{
+		"_id" : 7, 
+		"name" : "Pineapple", 
+		"price" : 150, 
+		"img" : "https://i.ibb.co/FqKss0Z/Pineapple.jpg", 
+		"description" : "Pineapple is an incredibly delicious, healthy tropical fruit. "
+	},
+	{
+		"_id" : 8, 
+		"name" : "Apple", 
+		"price" : 300, 
+		"img" : "https://i.ibb.co/c1dXPFT/Apple.jpg", 
+		"description" : "Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants."
+	}
+]

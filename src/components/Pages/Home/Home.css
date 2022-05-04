@@ -1,0 +1,14 @@
+.banner{
+	height: 550px;
+	width: 100%;
+	background-image: url('../../../img/banner.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+@media screen and (max-width : 768px) {
+	.banner{
+		background-color: green;
+		background-image: none;
+	}
+}
