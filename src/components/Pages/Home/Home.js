@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import banner from '../../../img/banner.jpg';
+import Fruit from './Fruit/Fruit';
 import './Home.css';
 
 const Home = () => {
@@ -31,9 +32,15 @@ const Home = () => {
 		}
 
 	} */
+	const [fruits, setFruit] = useState([]);
+	useEffect(() => {
+		fetch('fruits.json')
+			.then(res => res.json())
+			.then(data => setFruit(data));
+	}, [])
 	return (
 		<section>
-			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='py-3'>
+			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navbar'>
 				<Container>
 					<Navbar.Brand href="#home"> Fruit Store </Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -66,7 +73,22 @@ const Home = () => {
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quo iste illo voluptate laboriosam delectus deleniti at assumenda voluptas ducimus.
 					</p>
 				</article>
-		    </div>
+			</div>
+			{/* end of the banner sections  */}
+			<section>
+				<h1 className='section-title'> Inventory  </h1>
+				<div className="fruits-container section-center">
+					{
+						fruits.map(fruit => <Fruit
+						key={fruit._id} fruit = {fruit}
+						>
+
+						</Fruit>
+						
+						)
+					}
+				</div>
+			</section>
 
 
 

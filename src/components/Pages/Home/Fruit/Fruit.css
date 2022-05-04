@@ -1,0 +1,35 @@
+@media screen and (max-width : 767px){
+	.single-fruit{
+		width: 450px;
+		margin-bottom: 1rem;
+	}
+	.img-container img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+/* for desktop version */
+@media screen and (min-width: 1024){
+	.single-fruit{
+		width: 350px;
+	}
+	.img-container img{
+		width: 300px;
+	}
+}
+/* for laptop version  */
+@media screen and (min-width : 768px){
+	.single-fruit{
+		width: 350px;
+	}
+}
+.fruit-info{
+	margin-top: 0.5rem;
+}
+.fruit-info-header{
+	display: flex;
+	justify-content: space-between;
+}
+.fruit-description p {
+	text-align: justify;
+}
