@@ -4,23 +4,27 @@
 		margin-bottom: 1rem;
 	}
 	.img-container img{
-		display: block;
-		margin: 0 auto;
+		/* display: block; */
+		/* margin: 0 auto; */
+		width: 100%;
 	}
 }
 /* for desktop version */
-@media screen and (min-width: 1024){
+@media screen and (min-width: 1224){
 	.single-fruit{
-		width: 350px;
+		width: 300px;
 	}
 	.img-container img{
-		width: 300px;
+		width: 100%;
 	}
 }
 /* for laptop version  */
 @media screen and (min-width : 768px){
 	.single-fruit{
 		width: 350px;
+	}
+	.img-container img{
+		width: 100%;
 	}
 }
 .fruit-info{

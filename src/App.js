@@ -6,6 +6,7 @@ import Blog from './components/Pages/Blog/Blog';
 import Home from './components/Pages/Home/Home';
 import UpdateUser from './components/Update/UpdateUser'; 
 import banner from './img/banner.jpg';
+import Footer from './components/Shared/Footer/Footer';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
           
         </UpdateUser> }></Route>
       </Routes>
+      <Footer></Footer>
     </div>
+    
   );
 }
 
