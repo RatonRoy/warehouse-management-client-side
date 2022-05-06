@@ -38,7 +38,7 @@ const Login = () => {
 					Login 
 				</Button>
 			</Form>
-			<p className='register-text'>New to the Fruit Store <span className='text-success register' onClick={handaleRegister}> Please Register </span> </p>
+			<p className='register-text'>New to the Fruit Store? <span className='text-danger register' onClick={handaleRegister}> Please Register </span> </p>
 		</div>
 	);
 };
