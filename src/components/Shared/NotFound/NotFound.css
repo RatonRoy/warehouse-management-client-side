@@ -1,0 +1,10 @@
+.notfound-container{
+	background-color: cadetblue;
+}
+.error-img-container{
+	max-height: 50vh;
+
+}
+.error-img-container img {
+	width: 100%;
+}

@@ -10,6 +10,7 @@ import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import Inventory from './components/Pages/Home/Inventory/Inventory';
 import FruitDetails from './components/Pages/FruitDetails/FruitDetails';
+import NotFound from './components/Shared/NotFound/NotFound';
 
 
 function App() {
@@ -18,10 +19,12 @@ function App() {
       <Header> </Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}>
         </Route>
-        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-        <Route path = '/inventory/:InventoryId' element = {<FruitDetails></FruitDetails>}></Route>
+        {/* <Route path='/inventory' element={<Inventory></Inventory>}></Route> */}
+        <Route path='/inventory/:InventoryId' element={<FruitDetails></FruitDetails>}></Route>
+        <Route path = '*' element = {<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </main>

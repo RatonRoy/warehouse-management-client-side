@@ -6,7 +6,7 @@ import './Footer.css';
 
 const Footer = () => {
 	return (
-		<footer >
+		<footer id='contact'>
 			<section className='footer-container'>
 				<h1 className="section-title contact-title">contact</h1>
 				<article className="section-center footer-info-container">

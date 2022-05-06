@@ -11,7 +11,7 @@ const Inventory = () => {
 			.then(data => setFruit(data));
 	}, [])
 	return (
-		<section>
+		<section id = 'inventory'>
 			<h1 className='section-title'> Inventory  </h1>
 			<div className="fruits-container section-center">
 				{
