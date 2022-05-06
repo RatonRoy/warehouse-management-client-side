@@ -11,6 +11,8 @@ import Header from './components/Shared/Header/Header';
 import Inventory from './components/Pages/Home/Inventory/Inventory';
 import FruitDetails from './components/Pages/FruitDetails/FruitDetails';
 import NotFound from './components/Shared/NotFound/NotFound';
+import Login from './components/Pages/Login/Login';
+import Register from './components/Pages/Register/Register';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
         </Route>
         {/* <Route path='/inventory' element={<Inventory></Inventory>}></Route> */}
         <Route path='/inventory/:InventoryId' element={<FruitDetails></FruitDetails>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path = '/register' element = {<Register></Register>}></Route>
         <Route path = '*' element = {<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

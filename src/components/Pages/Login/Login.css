@@ -1,0 +1,10 @@
+.login-container{
+	background-color: #cdf2f8;
+}
+.register{
+	cursor: pointer;
+}
+.register-text{
+	margin-top: 1rem;
+	text-align: left !important;
+}
