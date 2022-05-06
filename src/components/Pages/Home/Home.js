@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import banner from '../../../img/banner.jpg';
-import Fruit from './Fruit/Fruit';
+import React from 'react';
+
+
 import './Home.css';
+import Inventory from './Inventory/Inventory';
 
 const Home = () => {
 	/* const [users, setUser] = useState([]);
@@ -32,39 +31,10 @@ const Home = () => {
 		}
 
 	} */
-	const [fruits, setFruit] = useState([]);
-	useEffect(() => {
-		fetch('fruits.json')
-			.then(res => res.json())
-			.then(data => setFruit(data));
-	}, [])
+	
 	return (
 		<section>
-			<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navbar'>
-				<Container>
-					<Navbar.Brand href="#home"> Fruit Store </Navbar.Brand>
-					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-					<Navbar.Collapse id="responsive-navbar-nav">
-						<Nav className="me-auto">
-							<Nav.Link href="#features">Home</Nav.Link>
-							<Nav.Link href="#pricing">Inventory</Nav.Link>
-							<NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-								<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-								<NavDropdown.Divider />
-								<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-							</NavDropdown>
-						</Nav>
-						<Nav>
-							<Nav.Link href="#deets">More deets</Nav.Link>
-							<Nav.Link eventKey={2} href="#memes">
-								Dank memes
-							</Nav.Link>
-						</Nav>
-					</Navbar.Collapse>
-				</Container>
-			</Navbar>
+			
 			{/* End of the navbar  */}
 			<div className="banner">
 				<article className="banner-info">
@@ -75,21 +45,8 @@ const Home = () => {
 				</article>
 			</div>
 			{/* end of the banner sections  */}
-			<section>
-				<h1 className='section-title'> Inventory  </h1>
-				<div className="fruits-container section-center">
-					{
-						fruits.map(fruit => <Fruit
-						key={fruit._id} fruit = {fruit}
-						>
-
-						</Fruit>
-						
-						)
-					}
-				</div>
-			</section>
-
+			<Inventory></Inventory>
+			{/* end of inventory section */}
 
 
 

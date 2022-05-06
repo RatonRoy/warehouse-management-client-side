@@ -7,29 +7,24 @@ import Home from './components/Pages/Home/Home';
 import UpdateUser from './components/Update/UpdateUser'; 
 import banner from './img/banner.jpg';
 import Footer from './components/Shared/Footer/Footer';
+import Header from './components/Shared/Header/Header';
+import Inventory from './components/Pages/Home/Inventory/Inventory';
+import FruitDetails from './components/Pages/FruitDetails/FruitDetails';
 
 
 function App() {
   return (
-    <div className="">
-      {/* <Blog> </Blog> */}
-      <div
-        
-      
-      >
-
-      </div>
+    <main>
+      <Header> </Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}>
         </Route>
-        <Route path='/user/add' element={<Adduser></Adduser>}></Route>
-        <Route path='/update/:id' element={<UpdateUser>
-          
-        </UpdateUser> }></Route>
+        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
+        <Route path = '/inventory/:InventoryId' element = {<FruitDetails></FruitDetails>}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </main>
     
   );
 }
