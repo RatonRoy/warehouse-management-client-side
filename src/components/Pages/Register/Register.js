@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
@@ -7,15 +7,17 @@ import { Button, Form } from 'react-bootstrap';
 import './Register.css';
 import auth from '../../../firebase.init';
 import SocialLogin from '../Login/SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loding/Loding';
 
 
 const Register = () => {
+	const [agree, setAgree] = useState(false)
 	const [
 		createUserWithEmailAndPassword,
 		user,
 		loading,
 		error,
-	] = useCreateUserWithEmailAndPassword(auth);
+	] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification : true});
 	// use navigate hooks 
 	const navigate = useNavigate();
 	// if user is true then go to the home page 
@@ -31,6 +33,11 @@ const Register = () => {
 	const handaleLogin = () => {
 		navigate('/login');
 	}
+	
+		// loding 
+		if (loading) {
+			return <Loading></Loading>
+		}
 
 	const handleRegisterFrom = async (e) => {
 		e.preventDefault();
@@ -63,9 +70,14 @@ const Register = () => {
 						<Form.Control ref={passwordRef} type="password" placeholder="Password" required className='py-2' />
 					</Form.Group>
 					<Form.Group className="mb-3" controlId="formBasicCheckbox">
-						<Form.Check type="checkbox" label="Agree with terms and conditions"/>
+						<Form.Check type="checkbox"
+							onClick={() => setAgree(!agree)}
+							className = {`${agree ? 'text-success' : 'text-danger'}`}
+							label="Agree with terms and conditions" />
 					</Form.Group>
-					<Button variant="primary" type="submit">
+					<Button variant="primary" type="submit"
+						disabled = {!agree}
+					>
 						Register
 					</Button>
 				</Form>

@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate,useLocation } from 'react-router-dom';
 import './Login.css';
 import auth from '../../../firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Shared/Loding/Loding';
 
 const Login = () => {
 	const [
@@ -12,14 +15,20 @@ const Login = () => {
 		user,
 		loading,
 		error,
-	  ] = useSignInWithEmailAndPassword(auth);
+	] = useSignInWithEmailAndPassword(auth);
+	// reset password 
+	const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+		auth
+	  );
 	// use the useRef() hook 
 	const emailRef = useRef('');
 	const passwordRef = useRef('');
 	// use navigate hooks 
 	const navigate = useNavigate();
-	// Redirect to  the login page
 	const location = useLocation();
+	
+	// Redirect to  the login page
+	
 	let from = location.state?.from?.pathname || "/";
 
 	if (user) {
@@ -33,7 +42,18 @@ const Login = () => {
 			
 			</p>
 		</div>
-  }
+	}
+	
+	const resetPassword = async() => {
+		const email = emailRef.current.value; 
+		if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
+	}
 	const handleLoginFrom = (e) => {
 		e.preventDefault();
 		const email = emailRef.current.value; 
@@ -42,6 +62,10 @@ const Login = () => {
 		console.log(email, password);
 		
 	}
+		// loding 
+		if (loading || sending) {
+			return <Loading></Loading>
+		}
 	const handaleRegister = () => {
 		navigate('/register');
 	}
@@ -65,9 +89,11 @@ const Login = () => {
 					Login 
 				</Button>
 			</Form>
-			<p className='register-text'>New to the Fruit Store? <span className='text-danger register' onClick={handaleRegister}> Please Register </span> </p>
+			<p className='register-text'>New to the Fruit Store? <span className='text-success register' onClick={handaleRegister}> Please Register </span> </p>
+			<p className='register-text'>Forgot Password? <span className='text-success register' onClick={resetPassword}> Reset Password  </span> </p>
 			{ emailError }
 			<SocialLogin></SocialLogin>
+			<ToastContainer />
 		</div>
 	);
 };
