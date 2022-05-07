@@ -1,19 +1,32 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import auth from '../../../firebase.init';
 
 const Login = () => {
+	const [
+		signInWithEmailAndPassword,
+		user,
+		loading,
+		error,
+	  ] = useSignInWithEmailAndPassword(auth);
 	// use the useRef() hook 
 	const emailRef = useRef('');
 	const passwordRef = useRef('');
 	// use navigate hooks 
 	const navigate = useNavigate();
+	if (user) {
+		navigate('/home');
+	}
 	const handleLoginFrom = (e) => {
 		e.preventDefault();
 		const email = emailRef.current.value; 
 		const password = passwordRef.current.value; 
+		signInWithEmailAndPassword(email, password)
 		console.log(email, password);
+		
 	}
 	const handaleRegister = () => {
 		navigate('/register');
