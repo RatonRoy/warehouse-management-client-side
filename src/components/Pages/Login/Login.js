@@ -25,6 +25,15 @@ const Login = () => {
 	if (user) {
 		navigate(from, { replace: true });
 	}
+	let emailError;
+	if (error) {
+		
+		emailError = <div>
+			<p className='text-danger'>Error: {error?.message}
+			
+			</p>
+		</div>
+  }
 	const handleLoginFrom = (e) => {
 		e.preventDefault();
 		const email = emailRef.current.value; 
@@ -57,6 +66,7 @@ const Login = () => {
 				</Button>
 			</Form>
 			<p className='register-text'>New to the Fruit Store? <span className='text-danger register' onClick={handaleRegister}> Please Register </span> </p>
+			{ emailError }
 			<SocialLogin></SocialLogin>
 		</div>
 	);
