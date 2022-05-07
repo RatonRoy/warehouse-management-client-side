@@ -15,4 +15,16 @@
 2.4. Get the input value [
 	const emailValue = emailRef.current.value
 ]
+3. Redirect to the login pages 
+3.1 First set the location [
+		const location = useLocation();
+]
+3.2 Where come from [
+	let from = location.state?.from?.pathname || "/";
+]
+3.3 use the navigation if the user remains [
+	if (user) {
+		navigate(from, { replace: true });
+	}
+]
 ************************/

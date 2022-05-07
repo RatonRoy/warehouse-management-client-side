@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import './Login.css';
 import auth from '../../../firebase.init';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
 	const [
@@ -17,8 +18,12 @@ const Login = () => {
 	const passwordRef = useRef('');
 	// use navigate hooks 
 	const navigate = useNavigate();
+	// Redirect to  the login page
+	const location = useLocation();
+	let from = location.state?.from?.pathname || "/";
+
 	if (user) {
-		navigate('/home');
+		navigate(from, { replace: true });
 	}
 	const handleLoginFrom = (e) => {
 		e.preventDefault();
@@ -52,6 +57,7 @@ const Login = () => {
 				</Button>
 			</Form>
 			<p className='register-text'>New to the Fruit Store? <span className='text-danger register' onClick={handaleRegister}> Please Register </span> </p>
+			<SocialLogin></SocialLogin>
 		</div>
 	);
 };

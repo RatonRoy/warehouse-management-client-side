@@ -6,6 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 // import auth from '../../../../firebase.init.js';
 import './Register.css';
 import auth from '../../../firebase.init';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -69,7 +70,9 @@ const Register = () => {
 					</Button>
 				</Form>
 				<p className='register-text'>Already Have An Account  <span className='text-success register' onClick={handaleLogin}> Please Login</span> </p>
+				<SocialLogin></SocialLogin>
 			</div>
+			
 		</div>
 	);
 };

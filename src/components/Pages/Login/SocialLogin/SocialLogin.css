@@ -1,0 +1,12 @@
+
+.button{
+	font-size: 1.5rem;
+	letter-spacing: 0.15rem;
+}
+.google-icon, .git-icon{
+	font-size: 2rem;
+	margin-right: 0.5rem;
+}
+.git-icon{
+	color: black;
+}
