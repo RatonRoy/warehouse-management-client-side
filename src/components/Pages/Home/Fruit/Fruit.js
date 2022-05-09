@@ -37,9 +37,9 @@ const Fruit = (props) => {
 					<p>
 						<button className='fruit-btn' onClick={() => navigateTomanageFruit(_id)}>Manage {name} </button>
 					</p>
-					{/* <p>
+					<p>
 						<button className="fruit-btn-one">Remove Fruit </button>
-					</p> */}
+					</p>
 				</div>
 			</article>
 		</section>

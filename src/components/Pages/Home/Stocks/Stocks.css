@@ -1,0 +1,38 @@
+ .stocks-wrap{
+	 background-color: #caf0f8;
+	 padding: 2rem 1rem;
+ }
+ .stock-title{
+	 text-align: center;
+	padding-top: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+ }
+.stock-container{
+	width: 95%;
+	/* background-color: #ddd;
+	border: 2px solid #ddd; */
+
+	margin-bottom: 1rem;
+  }
+  .stockbar-container{
+	background-color: #ddd;
+	border: 2px solid #ddd;
+	border-radius: 1rem;
+  }
+  h4{
+	text-transform: capitalize;
+  }
+  .stock {
+	text-align: right;
+	padding: 0.6rem 0;
+	color: white;
+	
+  }
+  
+  .mango {width: 90%; background-color: #04AA6D;}
+  .Pineapple {width: 80%; background-color: #2196F3;}
+  .Watermelon {width: 75%; background-color: #f44336;}
+  .Apple {width: 60%; background-color: #808080;}
+  .Jackfruit {width: 40%; background-color: #dbad57;}
+ 

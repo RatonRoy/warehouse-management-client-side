@@ -1,0 +1,18 @@
+.add-fruit-btn {
+	display: block;
+	width: 40%;
+	background-color: #023e8a;
+	color: white;
+	border: 1px solid #023e8a;
+	padding: 0.6rem;
+	text-align: center;
+	border-radius: 0.5rem;
+	letter-spacing: 0.2rem;
+	font-size: 1.3rem;
+	transition: 0.5s;
+	margin: 0 auto;
+	text-decoration: none;
+}
+.add-fruit-btn:hover{
+	color: #83b2f0;
+}

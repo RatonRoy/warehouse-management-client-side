@@ -3,6 +3,7 @@ import React from 'react';
 
 import './Home.css';
 import Inventory from './Inventory/Inventory';
+import Stocks from './Stocks/Stocks';
 
 const Home = () => {
 	/* const [users, setUser] = useState([]);
@@ -45,8 +46,10 @@ const Home = () => {
 				</article>
 			</div>
 			{/* end of the banner sections  */}
+			
 			<Inventory></Inventory>
 			{/* end of inventory section */}
+			<Stocks></Stocks>
 
 
 

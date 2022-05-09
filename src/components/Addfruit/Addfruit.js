@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 const Addfruit = () => {
 	const { register, handleSubmit } = useForm();
 	const onSubmit = data => {
@@ -25,7 +26,8 @@ const Addfruit = () => {
 				<input className='mb-3 p-1' placeholder=' price' type="number" {...register("price")} />
 				<input className='mb-3 p-1' placeholder='provider' type="text" {...register("provider")} />
 				<input className='mb-3 p-1' placeholder='Photo Url ' type="text" {...register("img")} />
-				<input type="submit" value= 'Add Fruit' className='bg-success text-light b-none' />
+				<Link to = '/allinventory' className='add-fruit-btn'> Add Fruit </Link>
+				{/* <input type="submit" value= 'Add Fruit' className='bg-success text-light add-fruit-btn' /> */}
 			</form>
 		</div>
 	);

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Fruit from '../Fruit/Fruit';
+import './Allinventory.css';
 
 const Allinventory = () => {
 	const [fruits, setFruit] = useState([]);
@@ -23,7 +25,8 @@ const Allinventory = () => {
 	
 						</Fruit>)
 				}
-			</div>
+				</div>
+				<Link to = '/addfruit' className='add-fruit-btn'> Add A New Fruit </Link>
 		</section>
 		</div>
 	);
