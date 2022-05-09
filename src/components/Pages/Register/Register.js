@@ -75,13 +75,13 @@ const Register = () => {
 							className = {`${agree ? 'text-success' : 'text-danger'}`}
 							label="Agree with terms and conditions" />
 					</Form.Group>
-					<Button variant="primary" type="submit"
-						disabled = {!agree}
+					<Button variant="success w-25" type="submit"
+						disabled = {!agree} className = 'register'
 					>
 						Register
 					</Button>
 				</Form>
-				<p className='register-text'>Already Have An Account  <span className='text-success register' onClick={handaleLogin}> Please Login</span> </p>
+				<p className='register-text'>Already have an account  <span className='text-success register-text' onClick={handaleLogin}> Please Login</span> </p>
 				<SocialLogin></SocialLogin>
 			</div>
 			

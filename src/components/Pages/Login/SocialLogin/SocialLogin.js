@@ -22,7 +22,7 @@ const SocialLogin = () => {
 	if (googleUser || githubUser) {
 		navigate(from, { replace: true });
 	}
-	
+
 	if (googleLoading || githubLoading) {
 		return <Loading></Loading>
 	}
@@ -51,12 +51,12 @@ const SocialLogin = () => {
 					onClick={() => signInWithGoogle()}
 					type="button">
 					<FcGoogle className='google-icon'></FcGoogle>
-					Google Login</button>
+					Google Sign In </button>
 				<button class="btn btn-success py-2  button "
 						onClick={() => signInWithGithub()}
 					type="button">
 					<BsGithub className = 'git-icon'></BsGithub>
-					Github  Login </button>
+					Github  Sign In  </button>
 			</div>
 		</section>
 	);

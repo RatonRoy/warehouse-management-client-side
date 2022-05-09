@@ -1,18 +1,17 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Fruit from '../Fruit/Fruit';
-import './Inventory.css';
 
-const Inventory = () => {
+const Allinventory = () => {
 	const [fruits, setFruit] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:5000/inventory')
+		fetch('http://localhost:5000/allinventory')
 			.then(res => res.json())
 			.then(data => setFruit(data));
 	}, [])
 	return (
-		<section id='inventory' className='container'>
+		<div>
+			
+			<section id='inventory' className='container'>
 			<h1 className='section-title'> Inventory  </h1>
 			<div className="fruits-container section-center">
 				
@@ -25,9 +24,9 @@ const Inventory = () => {
 						</Fruit>)
 				}
 			</div>
-			<Link className='btn btn-info w-25 p-2 mx-auto d-block' to= '/allinventory' > All Fruits </Link>
 		</section>
+		</div>
 	);
 };
 
-export default Inventory;
+export default Allinventory;

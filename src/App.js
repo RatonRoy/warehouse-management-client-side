@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Adduser from './components/Adduser/Adduser';
 import Blog from './components/Pages/Blog/Blog';
 import Home from './components/Pages/Home/Home';
 import UpdateUser from './components/Update/UpdateUser';
@@ -15,6 +14,9 @@ import Login from './components/Pages/Login/Login';
 import Register from './components/Pages/Register/Register';
 import RequireAuth from './components/Pages/Login/RequireAuth/RequireAuth';
 import Checkout from './components/Pages/Checkout/Checkout/Checkout';
+import Addfruit from './components/Addfruit/Addfruit';
+import ManageFruit from './components/ManageFruit/ManageFruit';
+import Allinventory from './components/Pages/Home/AllInventory/Allinventory';
 
 
 function App() {
@@ -27,10 +29,25 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}>
         </Route>
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-        <Route path='/inventory/:InventoryId' element={<FruitDetails></FruitDetails>}></Route>
+        <Route path='/allinventory' element = {<Allinventory></Allinventory>}></Route>
+        <Route path='/inventory/:InventoryId' element={
+          <RequireAuth>
+            <FruitDetails></FruitDetails>
+          </RequireAuth>
+        }></Route>
         <Route path='/checkout' element={
           <RequireAuth>
             <Checkout> </Checkout>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addFruit' element={
+          <RequireAuth>
+            <Addfruit></Addfruit>
+          </RequireAuth>
+        }></Route>
+        <Route path='/managefruit' element={
+          <RequireAuth>
+            <ManageFruit></ManageFruit>
           </RequireAuth>
         }></Route>
         <Route path='/login' element={<Login></Login>}></Route>

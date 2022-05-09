@@ -85,12 +85,12 @@ const Login = () => {
 					<Form.Label>Password</Form.Label>
 					<Form.Control ref = { passwordRef} type="password" placeholder="Password"  required className='py-2'/>
 				</Form.Group>
-				<Button variant="primary" type="submit">
+				<Button variant="success w-25" type="submit" className='login'>
 					Login 
 				</Button>
 			</Form>
-			<p className='register-text'>New to the Fruit Store? <span className='text-success register' onClick={handaleRegister}> Please Register </span> </p>
-			<p className='register-text'>Forgot Password? <span className='text-success register' onClick={resetPassword}> Reset Password  </span> </p>
+			<p className='register-text'>New to the Fruit Store? <span className='text-success register-text' onClick={handaleRegister}> Please Register </span> </p>
+			<p className='register-text'>Forgot Password? <span className='text-success register-text' onClick={resetPassword}> Reset Password  </span> </p>
 			{ emailError }
 			<SocialLogin></SocialLogin>
 			<ToastContainer />

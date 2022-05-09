@@ -1,78 +1,82 @@
 [
-	
 	{
-		"_id" : 6, 
-		"name" : "Lychee", 
-		"price" : 250, 
-		 "quantity" : 100 , 
-		 "supplier" : "Sumon",
-		"img" : "https://i.ibb.co/4s5ydDm/Lychee.jpg", 
-		"description" : "Lychees contain several healthy minerals, vitamins, and antioxidants, such as potassium, copper, vitamin C, epicatechin, and rutin. These may help protect against heart disease, cancer, and diabetes "
+		"_id": 6,
+		"name": "Lychee",
+		"price": 250,
+		"quantity": 100,
+		"supplier": "Sumon",
+		 "sold" : 50,
+		"img": "https://i.ibb.co/4s5ydDm/Lychee.jpg",
+		"description": "Lychees contain several healthy minerals, vitamins, and antioxidants, such as potassium, copper, vitamin C, epicatechin, and rutin. These may help protect against heart disease, cancer, and diabetes "
 	},
 	{
-		"_id" : 2, 
-		"name" : "Mango", 
-		"price" : 100, 
-		"quantity" : 500 , 
-		"supplier" : "Fardin",
-		"img" : "https://i.ibb.co/FBkMByx/mango.jpg", 
-		"description" : "Mango fruit is rich in pre-biotic dietary fiber, vitamins, minerals, and poly-phenolic flavonoid antioxidant compounds.  Mango a fruit widely cultivated in the tropical and subtropical region of the Bangladesh."
+		"_id": 2,
+		"name": "Mango",
+		"price": 100,
+		"quantity": 500,
+		"supplier": "Fardin",
+		 "sold" : 100, 
+		"img": "https://i.ibb.co/FBkMByx/mango.jpg",
+		"description": "Mango fruit is rich in pre-biotic dietary fiber, vitamins, minerals, and poly-phenolic flavonoid antioxidant compounds.  Mango a fruit widely cultivated in the tropical and subtropical region of the Bangladesh."
 	},
 	{
-		"_id" : 8, 
-		"name" : "Apple", 
-		"price" : 300, 
-		"quantity" : 50 , 
-		"supplier" : "Rakin",
-		"img" : "https://i.ibb.co/j5nSjvw/Apple.jpg", 
-		"description" : "Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants."
-	},
-	
-	{
-		"_id" : 4, 
-		"name" : "Blackberry", 
-		"price" : 150, 
-		"quantity" : 30 , 
-		"supplier" : "Farhana",
-		"img" : "https://i.ibb.co/kBHhCJb/Blackberry.jpg", 
-		"description" : "Blackberry is a seasonal fruit in our country. We only store this fruit only the summer season. This is a very delicious fruit for fruit lovers in our country. "
+		"_id": 8,
+		"name": "Apple",
+		"price": 300,
+		"quantity": 500,
+		"supplier": "Rakin",
+		 "sold" : 200, 
+		"img": "https://i.ibb.co/j5nSjvw/Apple.jpg",
+		"description": "Apples are an incredibly nutritious fruit that offers multiple health benefits. They're rich in fiber and antioxidants."
 	},
 	{
-		"_id" : 5, 
-		"name" : "Watermelon", 
-		"price" : 50, 
-		"quantity" : 150 , 
-		"supplier" : "Titu ",
-		"img" : "https://i.ibb.co/2nMN347/watermelon.jpg", 
-		"description" : "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals etc."
-	},
-	
-	{
-		"_id" : 7, 
-		"name" : "Pineapple", 
-		"price" : 150,
-		"quantity" : 200 ,  
-		"supplier" : " Roy ",
-		"img" : "https://i.ibb.co/vxBXHKk/Pineapple.jpg", 
-		"description" : "Pineapple is an incredibly delicious, healthy tropical fruit. "
+		"_id": 4,
+		"name": "Blackberry",
+		"price": 150,
+		"quantity": 200,
+		"supplier": "Farhana",
+		 "sold" : 50, 
+		"img": "https://i.ibb.co/kBHhCJb/Blackberry.jpg",
+		"description": "Blackberry is a seasonal fruit in our country. We only store this fruit only the summer season. This is a very delicious fruit for fruit lovers in our country. "
 	},
 	{
-		"_id" : 3, 
-		"name" : "Jackfruit", 
-		"price" : 200, 
-		"quantity" : 100 , 
-		"supplier" : "Zahir",
-		"img" : "https://i.ibb.co/FBr5LXs/jackfruit.jpg", 
-		"description" : "Jackfruit offers several key nutrients, including fiber, protein, vitamin C, B vitamins, and potassium. We have different type of jackfruit in our warehouse."
+		"_id": 5,
+		"name": "Watermelon",
+		"price": 50,
+		"quantity": 1000,
+		"supplier": "Titu ",
+		 "sold" : 200, 
+		"img": "https://i.ibb.co/2nMN347/watermelon.jpg",
+		"description": "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals etc."
 	},
 	{
-		"_id" : 1, 
-		"name" : "Banana", 
-		"price" : 150, 
-		"quantity" : 500 , 
-		"supplier" : "Ronto",
-		"img" : "https://i.ibb.co/9sxjqhN/banana.jpg", 
-		"description" : "Banana is one of the major fruits of Bangladesh.  This  fruit is available throughout the year. We store variers  type of banana in our warehouse."
+		"_id": 7,
+		"name": "Pineapple",
+		"price": 150,
+		"quantity": 1500,
+		"supplier": " Roy ",
+		 "sold" : 200,
+		"img": "https://i.ibb.co/vxBXHKk/Pineapple.jpg",
+		"description": "Pineapple is an incredibly delicious, healthy tropical fruit. "
+	},
+	{
+		"_id": 3,
+		"name": "Jackfruit",
+		"price": 200,
+		"quantity": 100,
+		"supplier": "Zahir",
+		 "sold" : 20, 
+		"img": "https://i.ibb.co/FBr5LXs/jackfruit.jpg",
+		"description": "Jackfruit offers several key nutrients, including fiber, protein, vitamin C, B vitamins, and potassium. We have different type of jackfruit in our warehouse."
+	},
+	{
+		"_id": 1,
+		"name": "Banana",
+		"price": 4,
+		"quantity": 1000,
+		"supplier": "Ronto",
+		 "sold" : 200, 
+		"img": "https://i.ibb.co/9sxjqhN/banana.jpg",
+		"description": "Banana is one of the major fruits of Bangladesh.  This  fruit is available throughout the year. We store variers  type of banana in our warehouse."
 	}
 ]
-
