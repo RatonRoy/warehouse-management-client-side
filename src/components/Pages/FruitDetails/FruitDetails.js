@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import useInventoryDetail from '../../Hooks/useInventoryDetail';
 import './FruitDetails.css';
+
 
 const FruitDetails = () => {
 	// to read the product id 
 	const { InventoryId } = useParams()
-	const [inventory, setInventory] = useState({});
+	const [inventory] = useInventoryDetail(InventoryId);
+	/* const [inventory, setInventory] = useState({});
 	useEffect(() => {
 		const url = `http://localhost:5000/allinventory/${InventoryId}`;
 		fetch(url)
 			.then(res => res.json())
 			.then(data => setInventory(data))
-	}, [])
+	}, []) */
 	const {name, img, supplier, price, quantity,description, sold } = inventory;
 	return (
 		<section className="manage-container">
@@ -40,6 +43,9 @@ const FruitDetails = () => {
 						<button className='manage-fruit-btn'>
 							Deliver Min 5Kg
 						</button>
+						<Link className='manage-fruit-btn' to = {`/checkout/${InventoryId}`}>
+							Place Order  
+						</Link>
 					</div>
 				</article>
 			</div>

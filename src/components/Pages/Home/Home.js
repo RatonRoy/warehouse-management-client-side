@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from './Contact/Contact';
 
 
 import './Home.css';
@@ -38,18 +39,21 @@ const Home = () => {
 			
 			{/* End of the navbar  */}
 			<div className="banner">
-				<article className="banner-info">
-					<h3>Lorem ipsum dolor sit amet.</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quo iste illo voluptate laboriosam delectus deleniti at assumenda voluptas ducimus.
-					</p>
-				</article>
+				<div className="banner-container-info">
+					<article className="banner-info">
+						<h3> Bangladesh is a beautiful country. Various kinds of fruits grow in Bangladesh.</h3>
+						<p>
+						Among them, mango, orange, pineapple, banana, Lychee, coconut, lemons, pummel, guavas etc. are the main fruits of Bangladesh.
+						</p>
+					</article>
+				</div>
 			</div>
 			{/* end of the banner sections  */}
 			
 			<Inventory></Inventory>
 			{/* end of inventory section */}
 			<Stocks></Stocks>
+			<Contact></Contact>
 
 
 

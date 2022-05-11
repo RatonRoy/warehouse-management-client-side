@@ -1,7 +1,6 @@
 
 .banner {
-	background-color: green;
-	background-image: none;
+	background-color: #90e0ef;
 	height: 550px;
 }
 
@@ -16,22 +15,22 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
-
-	.banner-info {
-		/* width: 60%;
-		margin: 0 auto; 
-		height: 400px;
-		align-items: center; */
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-ms-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
+	.banner-info{
 		color: white;
+	}
+	
+}
 
-	}
-	.banner-info h3, p{
-		text-align: center;
-	}
+.banner-container-info{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 550px;
+}
+.banner-info{
+	width: 50%;
+	height: 200px;
+}
+.banner-info h3, p{
+	text-align: center;
 }
