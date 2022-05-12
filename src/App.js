@@ -4,7 +4,6 @@ import './App.css';
 import Blog from './components/Pages/Blog/Blog';
 import Home from './components/Pages/Home/Home';
 import UpdateUser from './components/Update/UpdateUser';
-import banner from './img/banner.jpg';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import Inventory from './components/Pages/Home/Inventory/Inventory';
@@ -51,6 +50,7 @@ function App() {
             <Orders></Orders>
           </RequireAuth>
         }></Route>
+        <Route path='/update' element = {<UpdateUser></UpdateUser>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

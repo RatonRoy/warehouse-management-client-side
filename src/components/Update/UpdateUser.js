@@ -34,6 +34,7 @@ const UpdateUser = (id) => {
             event.target.reset();
         })
     }
+    
 
     return (
         <section className='section-center'>

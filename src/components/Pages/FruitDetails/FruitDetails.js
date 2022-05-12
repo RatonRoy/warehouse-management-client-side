@@ -6,8 +6,34 @@ import './FruitDetails.css';
 
 const FruitDetails = () => {
 	const { InventoryId } = useParams()
-	const [inventory] = useInventoryDetail(InventoryId);
-	const {name, img, supplier, price, quantity,description, sold } = inventory;
+	const [inventory, setInventory] = useInventoryDetail(InventoryId);
+	let { name, img, supplier, price, quantity, description, sold } = inventory;
+	// update Info 
+	const handleUpdatefruit = () =>{
+		quantity = quantity + 5;
+        
+
+        const updatedQuantity = {quantity};
+       
+
+        // send data to the server
+        const url = `http://localhost:5000/allinventory/${InventoryId}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log('success', data, updatedQuantity);
+			alert('fruit added successfully!!!');
+			setInventory(data)
+           
+        })
+    }
+	// end of update info 
 	return (
 		<section className="manage-container">
 			<h1 className='manage-title'> Manage : {name} </h1>
@@ -32,7 +58,7 @@ const FruitDetails = () => {
 						</p>
 					</div>
 					<div className="manage-fruit-btn-container">
-						<button className='manage-fruit-btn'>
+						<button className='manage-fruit-btn' onClick={handleUpdatefruit}>
 							Deliver Min 5Kg
 						</button>
 						<Link className='manage-fruit-btn' to = {`/checkout/${InventoryId}`}>
