@@ -15,7 +15,6 @@ import Register from './components/Pages/Register/Register';
 import RequireAuth from './components/Pages/Login/RequireAuth/RequireAuth';
 import Checkout from './components/Pages/Checkout/Checkout/Checkout';
 import Addfruit from './components/Addfruit/Addfruit';
-import ManageFruit from './components/ManageFruit/ManageFruit';
 import Allinventory from './components/Pages/Home/AllInventory/Allinventory';
 import { ToastContainer } from 'react-toastify';
 import Orders from './components/Pages/Orders/Orders';
@@ -45,11 +44,6 @@ function App() {
         <Route path='/addFruit' element={
           <RequireAuth>
             <Addfruit></Addfruit>
-          </RequireAuth>
-        }></Route>
-        <Route path='/managefruit' element={
-          <RequireAuth>
-            <ManageFruit></ManageFruit>
           </RequireAuth>
         }></Route>
         <Route path='/orders' element={

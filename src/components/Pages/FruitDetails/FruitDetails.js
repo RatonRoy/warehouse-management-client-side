@@ -5,16 +5,8 @@ import './FruitDetails.css';
 
 
 const FruitDetails = () => {
-	// to read the product id 
 	const { InventoryId } = useParams()
 	const [inventory] = useInventoryDetail(InventoryId);
-	/* const [inventory, setInventory] = useState({});
-	useEffect(() => {
-		const url = `http://localhost:5000/allinventory/${InventoryId}`;
-		fetch(url)
-			.then(res => res.json())
-			.then(data => setInventory(data))
-	}, []) */
 	const {name, img, supplier, price, quantity,description, sold } = inventory;
 	return (
 		<section className="manage-container">

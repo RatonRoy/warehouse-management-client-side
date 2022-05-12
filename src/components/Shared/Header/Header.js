@@ -27,9 +27,6 @@ const Header = () => {
 							{
 								user ?
 									<>
-									<Nav.Link as={Link} to="/managefruit">
-										  Manage Fruits 
-								   </Nav.Link>
 									<Nav.Link as={Link} to="/addfruit">
 										  Add Fruits 
 								   </Nav.Link>

@@ -1,5 +1,36 @@
-.order{
+.order-container {
 	min-height: 100vh;
-	width: 50vw;
+	/* width: 50vw; */
+	/* margin: 0 auto; */
+	padding: 2rem 1rem;
+	background-color: #ecf8fa;
+}
+
+.orders {
+	width: 60vw;
 	margin: 0 auto;
+	background-color: #90e0ef;
+}
+
+.orders-name {
+	text-align: center;
+	letter-spacing: 0.2rem;
+
+}
+
+.single-order {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: #f8ad9d; */
+	padding: 0.5rem 1rem;
+}
+
+.order-remove-btn {
+	border: none;
+	background-color: #ef233c;
+	color: white;
+	padding: 0.4rem 1rem;
+	text-align: center;
+	border-radius: 0.4rem;
 }

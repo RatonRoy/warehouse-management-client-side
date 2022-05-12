@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-
-
-
 const useFruits = () => {
 	const [fruits, setFruit] = useState([]);
 	useEffect(() => {
@@ -10,7 +7,7 @@ const useFruits = () => {
 			.then(res => res.json())
 			.then(data => setFruit(data));
 	}, [])
-	return [fruits, setFruit]
+	return [fruits, setFruit];
 }
 
 export default useFruits;
