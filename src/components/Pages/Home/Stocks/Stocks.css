@@ -30,9 +30,11 @@
 	
   }
   
-  .mango {width: 90%; background-color: #04AA6D;}
-  .Pineapple {width: 80%; background-color: #2196F3;}
-  .Watermelon {width: 75%; background-color: #f44336;}
-  .Apple {width: 60%; background-color: #808080;}
-  .Jackfruit {width: 40%; background-color: #dbad57;}
+  .Watermelon {width: 30%; background-color: #f44336;}
+  .Pineapple {width: 38%; background-color: #2196F3;}
+  .Apple {width: 42%; background-color: #808080;}
+  .Jackfruit {width: 35%; background-color: #dbad57;}
+  .mango {width: 55%; background-color: #04AA6D;}
+  .abroad-fruits {width: 50%; background-color: #51d61c;}
+  .seasonal-fruits {width: 70%; background-color: #2e1ec0;}
  
