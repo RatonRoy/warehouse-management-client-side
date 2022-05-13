@@ -1,33 +1,29 @@
-.section-center{
-	width: 90vw;
-	margin: 0 auto;
+
+.single-review{
+	background-color: lightblue;
 }
-
-.section-title{
-	text-align: center;
-	margin: 1rem 0; 
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-}
-
-
 @media screen and (max-width : 767px){
-	.fruits-container {
+	.all-review{
 		width: 80vw;
 		margin: 0 auto;
 	}
 }
 
-
 @media screen and (min-width : 768px) {
-	.fruits-container{
+	.all-review{
 		display: grid;
+		/* grid-gap: 2rem; */
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 @media screen and (min-width : 1224px) {
-	.fruits-container{
+	.all-review{
 		/* display: grid; */
 		grid-template-columns: repeat(3, 1fr);
 	}
+}
+.review-name{
+	text-align: center;
+	letter-spacing: 0.2rem;
+	color: maroon;
 }

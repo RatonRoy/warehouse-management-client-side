@@ -1,4 +1,4 @@
-.single-fruit{
+.single-item{
 	/* height: 500px; */
 	background-color: rgb(206, 198, 198);
 	margin-bottom: 1rem;
@@ -12,7 +12,7 @@
 	border-radius: 0.6rem;
 }
 @media screen and (max-width : 767px){
-	.single-fruit{
+	.single-item{
 		/* width: 450px; */
 		margin-bottom: 1rem;
 		/* height: 500px; */
@@ -25,7 +25,7 @@
 }
 /* for desktop version */
 @media screen and (min-width: 1224){
-	.single-fruit{
+	.single-item{
 		width: 300px;
 		/* height: 500px; */
 	}
@@ -35,14 +35,14 @@
 }
 /* for laptop version  */
 @media screen and (min-width : 768px){
-	.single-fruit{
+	.single-item{
 		width: 350px;
 	}
 	.img-container img{
 		width: 100%;
 	}
 }
-.fruit-info{
+.item-info{
 	margin-top: 0.5rem;
 }
 .fruit-info-header{

@@ -13,11 +13,11 @@ const Fruit = (props) => {
 	}
 
 	return (
-		<section className='single-fruit'>
+		<section className='single-item'>
 			<div className="img-container">
 				<img src={img} alt="" />
 			</div>
-			<article className="fruit-info">
+			<article className="item-info">
 				<div className="fruit-info-header">
 					<div className="name-price">
 						<h4 className="fruit-name">{name}</h4>

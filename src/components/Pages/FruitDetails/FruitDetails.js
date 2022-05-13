@@ -7,44 +7,48 @@ import './FruitDetails.css';
 const FruitDetails = () => {
 	const { InventoryId } = useParams()
 	const [inventory, setInventory] = useInventoryDetail(InventoryId);
+
+
 	let { name, img, supplier, price, quantity, description, sold } = inventory;
+
 	// update Info 
-	const handleUpdatefruit = () =>{
+	const handleUpdatefruit = () => {
 		quantity = quantity + 5;
-        
 
-        const updatedQuantity = {quantity};
-       
 
-        // send data to the server
-        const url = `http://localhost:5000/allinventory/${InventoryId}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(updatedQuantity)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log('success', data, updatedQuantity);
-			alert('fruit added successfully!!!');
-			setInventory(data)
-           
-        })
-    }
+		const updatedQuantity = { quantity };
+
+
+		// send data to the server
+		const url = `http://localhost:5000/allinventory/${InventoryId}`;
+		fetch(url, {
+			method: 'PUT',
+			headers: {
+				'content-type': 'application/json'
+			},
+			body: JSON.stringify(updatedQuantity)
+		})
+			.then(res => res.json())
+			.then(data => {
+				console.log('success', data, updatedQuantity);
+				// alert('fruit added successfully!!!');
+				// setInventory(data)
+
+			})
+		window.location.reload();
+	}
 	// end of update info 
 	return (
 		<section className="manage-container">
 			<h1 className='manage-title'> Manage : {name} </h1>
 			<div className="manage-fruit-wrapper">
 				<div className="manage-fruit-img">
-					<img src= {img} alt="" />
+					<img src={img} alt="" />
 				</div>
 				<article className="manage-fruit-info">
 					<div className="manage-fruit-data">
 						<div className="price-quantity">
-							<p> Price :  {price}/kg  </p>
+							<p> Price :  {price}Taka/kg  </p>
 							<p> Quantity :  {quantity}kg  </p>
 						</div>
 						<div className="suppplier-sold">
@@ -61,8 +65,8 @@ const FruitDetails = () => {
 						<button className='manage-fruit-btn' onClick={handleUpdatefruit}>
 							Deliver Min 5Kg
 						</button>
-						<Link className='manage-fruit-btn' to = {`/checkout/${InventoryId}`}>
-							Place Order  
+						<Link className='manage-fruit-btn' to={`/checkout/${InventoryId}`}>
+							Place Order
 						</Link>
 					</div>
 				</article>

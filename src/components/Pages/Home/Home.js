@@ -4,6 +4,7 @@ import Contact from './Contact/Contact';
 
 import './Home.css';
 import Inventory from './Inventory/Inventory';
+import Review from './Review/Review';
 import Stocks from './Stocks/Stocks';
 
 const Home = () => {
@@ -33,26 +34,27 @@ const Home = () => {
 		}
 
 	} */
-	
+
 	return (
 		<section>
-			
+
 			{/* End of the navbar  */}
 			<div className="banner">
 				<div className="banner-container-info">
 					<article className="banner-info">
 						<h3> Bangladesh is a beautiful country. Various kinds of fruits grow in Bangladesh.</h3>
 						<p>
-						Among them, mango, orange, pineapple, banana, Lychee, coconut, lemons, pummel, guavas etc. are the main fruits of Bangladesh.
+							Among them, mango, orange, pineapple, banana, Lychee, coconut, lemons, pummel, guavas etc. are the main fruits of Bangladesh.
 						</p>
 					</article>
 				</div>
 			</div>
 			{/* end of the banner sections  */}
-			
+
 			<Inventory></Inventory>
 			{/* end of inventory section */}
 			<Stocks></Stocks>
+			<Review></Review>
 			<Contact></Contact>
 
 
