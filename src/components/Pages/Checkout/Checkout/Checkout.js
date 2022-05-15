@@ -10,7 +10,7 @@ const Checkout = () => {
 	const [user] = useAuthState(auth);
 	const [inventory, setInventory] = useState({});
 	useEffect(() => {
-		const url = `http://localhost:5000/allinventory/${InventoryId}`;
+		const url = `https://safe-hamlet-12951.herokuapp.com/allinventory/${InventoryId}`;
 		fetch(url)
 			.then(res => res.json())
 			.then(data => setInventory(data))
@@ -28,7 +28,7 @@ const Checkout = () => {
             address: event.target.address.value,
             phone: event.target.phone.value
         }
-        axios.post('http://localhost:5000/order', order)
+        axios.post('https://safe-hamlet-12951.herokuapp.com/order', order)
         .then(response =>{
             const {data} = response;
             if(data.insertedId){
