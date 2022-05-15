@@ -20,7 +20,7 @@ const Home = () => {
 		const process = window.confirm("Are you sure want to delete this item ?");
 		if (process) {
 			console.log("User Id ", id);
-			const url = `http://localhost:5000/user/${id}`;
+			const url = `https://safe-hamlet-12951.herokuapp.com/user/${id}`;
 			fetch(url, {
 				method: "DELETE"
 			})
