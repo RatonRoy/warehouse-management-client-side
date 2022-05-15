@@ -15,7 +15,7 @@ const Orders = () => {
 		const getOrders = async () => {
 			const email = user.email;
 	
-			const url = `http://localhost:5000/orders?email=${email}`;
+			const url = `https://safe-hamlet-12951.herokuapp.com/orders?email=${email}`;
 			try{
 				const { data } = await axios.get(url, {
 					headers: {
@@ -39,7 +39,7 @@ const Orders = () => {
 	const deleteOrderItem = (id) => {
 		const proceed = window.confirm('Are you sure want to remove?')
 		if (proceed) {
-			const url = `http://localhost:5000/orders/${id}`;
+			const url = `https://safe-hamlet-12951.herokuapp.com/orders/${id}`;
 			fetch((url), {
 				method: 'DELETE'
 
