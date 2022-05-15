@@ -10,7 +10,7 @@ import Stocks from './Stocks/Stocks';
 const Home = () => {
 	/* const [users, setUser] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:5000/user')
+		fetch('https://safe-hamlet-12951.herokuapp.com/user')
 			.then(res => res.json())
 			.then(data => setUser(data));
 	}, []) */
