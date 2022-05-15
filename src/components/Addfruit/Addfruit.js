@@ -5,7 +5,7 @@ const Addfruit = () => {
 	const { register, handleSubmit } = useForm();
 	let navigate = useNavigate();
 	const onSubmit = data => {
-		const url = `http://localhost:5000/allinventory`;
+		const url = `https://safe-hamlet-12951.herokuapp.com/allinventory`;
 		fetch((url), {
 			method: 'POST',
 			headers: {
