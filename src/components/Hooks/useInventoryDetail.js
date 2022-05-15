@@ -6,7 +6,7 @@ const useInventoryDetail = (InventoryId) => {
 	// const { InventoryId } = useParams()
 	const [inventory, setInventory] = useState({});
 	useEffect(() => {
-		const url = `http://localhost:5000/allinventory/${InventoryId}`;
+		const url = `https://safe-hamlet-12951.herokuapp.com/${InventoryId}`;
 		fetch(url)
 			.then(res => res.json())
 			.then(data => setInventory(data))
