@@ -20,7 +20,7 @@ const FruitDetails = () => {
 
 
 		// send data to the server
-		const url = `http://localhost:5000/allinventory/${InventoryId}`;
+		const url = `https://safe-hamlet-12951.herokuapp.com/allinventory/${InventoryId}`;
 		fetch(url, {
 			method: 'PUT',
 			headers: {
