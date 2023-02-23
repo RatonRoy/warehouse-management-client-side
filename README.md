@@ -15,5 +15,4 @@
 - react-icons
 - react-toastify
 - react-router-dom6
-- The live side Link : https://glistening-buttercream-7e6192.netlify.app/
 - The Server Side Link :  https://warehouse-management-server-side-main.vercel.app/
